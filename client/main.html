@@ -4,4 +4,14 @@
 
 <body>
   {{> loginButtons}}
+  {{> Posts}}
 </body>
+
+<template name="Posts">
+  <button id="add">Add post</button>
+  <ul>
+  {{#each posts}}
+    <li>{{name}} {{userId}}</li>
+  {{/each}}
+  </ul>
+</template>
